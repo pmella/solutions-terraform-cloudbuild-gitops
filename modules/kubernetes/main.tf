@@ -1,6 +1,5 @@
 resource "google_container_cluster" "default" {
   name               = "mood-cluster"
-  zone               = "${var.subnet.zone}"
   initial_node_count = 1
   network            = "${google_compute_subnetwork.default.name}"
   subnetwork         = "${var.subnet}"
