@@ -1,5 +1,6 @@
 module "gke" {
   source                     = "terraform-google-modules/kubernetes-engine/google"
+  version                    = "5.0.0"
   project_id                 = "${var.project}"
   name                       = "gke-test-1"
   region                     = "us-central1"
