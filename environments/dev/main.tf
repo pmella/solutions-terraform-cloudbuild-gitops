@@ -49,5 +49,6 @@ module "gke" {
   subnetwork = "${element(module.vpc.subnets_names, 0)}"
   ip_range_pods = "${var.ip_range_pods}"
   ip_range_services = "${var.ip_range_services}"
+  compute_engine_service_account = "${var.compute_engine_service_account}"
 }
 
