@@ -45,10 +45,10 @@ module "gke" {
   project = "${var.project}"
   cluster_name_suffix = "${var.cluster_name_suffix}"
   region = "${var.region}"
-  network = "${module.vpc.network_name}"
   subnetwork = "${element(module.vpc.subnets_names, 0)}"
   ip_range_pods = "${var.ip_range_pods}"
   ip_range_services = "${var.ip_range_services}"
   compute_engine_service_account = "${var.compute_engine_service_account}"
+  env = "${local.env}"
 }
 
