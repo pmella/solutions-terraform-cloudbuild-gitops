@@ -62,5 +62,5 @@ resource "kubernetes_service" "nginx-example" {
     type = "LoadBalancer"
   }
 
-  depends_on = ["${module.gke}"]
+  depends_on = [module.gke]
 }
