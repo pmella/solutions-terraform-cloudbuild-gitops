@@ -10,7 +10,7 @@ data "google_client_config" "default" {
 
 module "gke" {
   source     = "terraform-google-modules/kubernetes-engine/google"
-  project_id = "${var.project_id}"
+  project_id = "${var.project}"
   name       = "${local.cluster_type}-cluster${var.cluster_name_suffix}"
   region     = "${var.region}"
   network    = "${var.network}"
