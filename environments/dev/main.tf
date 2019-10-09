@@ -40,11 +40,11 @@ module "http_server" {
   subnet  = "${module.vpc.subnet}"
 }
 
-module "kubernetes" {
-  source = "../../modules/kubernetes"
+module "gke" {
+  source = "../../modules/gke"
   project = "${var.project}"
   cluster_name_suffix = "${var.cluster_name_suffix}"
   region = "${var.region}"
-  
+
 }
 
