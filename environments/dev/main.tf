@@ -45,6 +45,6 @@ module "gke" {
   project = "${var.project}"
   cluster_name_suffix = "${var.cluster_name_suffix}"
   region = "${var.region}"
-
+  network = "${module.vpc.network_name}"
 }
 
