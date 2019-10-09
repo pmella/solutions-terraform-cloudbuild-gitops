@@ -46,5 +46,6 @@ module "gke" {
   cluster_name_suffix = "${var.cluster_name_suffix}"
   region = "${var.region}"
   network = "${module.vpc.network_name}"
+  subnetwork = "${element(module.vpc.subnets_names, 0)}"
 }
 
