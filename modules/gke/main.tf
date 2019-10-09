@@ -39,7 +39,7 @@ resource "kubernetes_pod" "nginx-example" {
     }
   }
 
-  depends_on = ["${module.gke}"]
+  depends_on = [module.gke]
 }
 
 resource "kubernetes_service" "nginx-example" {
