@@ -15,7 +15,7 @@
 
 terraform {
   backend "gcs" {
-    bucket = "mood-09242019-tfstate"
+    bucket = "mood-270122-tfstate"
     prefix = "env/dev"
   }
 }
